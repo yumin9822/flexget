@@ -5,7 +5,8 @@ RUN apk update && apk add wget python \
 	&& rm -rf /var/cache/apk/* \
 	&& wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py -O - | python
 
-RUN pip install -I flexget transmissionrpc \
+RUN pip install -I pytest-runner \
+	pip install -I flexget transmissionrpc \
 	&& mkdir -p /root/.flexget \
 	&& touch /root/.flexget/config.yml
 
